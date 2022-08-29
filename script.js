@@ -18,7 +18,7 @@ let playingCard = {
     shuffle() {
         const {playTable} = this
         for (let i = playTable.length -1; i > 0; i--) {
-            let j = Math.floor(Math.random()*(i + 1))
+            let j = Math.floor(Math.random()*(i + 1));
             [playTable[i], playTable[j]] = [playTable[j],playTable[i]]
         }
         
