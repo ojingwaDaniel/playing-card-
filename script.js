@@ -1,4 +1,3 @@
-
 let playingCard = {
     playTable : [],
     drawedCard : [],
@@ -16,6 +15,17 @@ let playingCard = {
         
        }
     },
+    shuffle() {
+        const {playTable} = this
+        for (let i = playTable.length -1; i > 0; i--) {
+            let j = Math.floor(Math.random()*(i + 1))
+            [playTable[i], playTable[j]] = [playTable[j],playTable[i]]
+        }
+        
+       
+        
+
+    },
     playcard(){
         let card = this.playTable.pop()
         this.drawedCard.push(card)
@@ -30,5 +40,6 @@ let playingCard = {
         return cards
 
     }
+
      
 }
